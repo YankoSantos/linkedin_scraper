@@ -240,7 +240,7 @@ class Person(Scraper):
             self.add_education(education)
 
     def get_name_and_location(self):
-        top_panel = self.driver.__TOP_CARD.find_element(By.CLASS_NAME, ".mt2.relative")
+        top_panel = self.driver.find_element(By.XPATH, "//*[@class='mt2 relative']")
         self.name = top_panel.find_element(By.TAG_NAME, "h1").text
         self.location = top_panel.find_element(By.XPATH, "//*[@class='text-body-small inline t-black--light break-words']")
 
