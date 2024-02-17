@@ -129,7 +129,8 @@ class Person(Scraper):
 
             print("len(outer_positions) -> ", len(outer_positions))
             print("##################")
-            print(outer_positions.text)
+            print(outer_positions[0].find_element(By.TAG_NAME,"span").text)
+            print(outer_positions[1].find_element(By.TAG_NAME,"span").text)
             print("##################")
             
             if len(outer_positions) == 4:
