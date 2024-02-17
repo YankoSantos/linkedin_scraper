@@ -128,6 +128,9 @@ class Person(Scraper):
             outer_positions = position_summary_details.find_element(By.XPATH,"*").find_elements(By.XPATH,"*")
 
             print("len(outer_positions) -> ", len(outer_positions))
+            print("##################")
+            print(outer_positions.text)
+            print("##################")
             
             if len(outer_positions) == 4:
                 position_title = outer_positions[0].find_element(By.TAG_NAME,"span").text
